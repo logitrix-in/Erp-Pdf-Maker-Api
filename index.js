@@ -7,8 +7,9 @@ const dotenv = require('dotenv')
 const util = require('util');
 const readFileAsync = util.promisify(fs.readFile);
 
-dotenv.config()
 
+dotenv.config()
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
