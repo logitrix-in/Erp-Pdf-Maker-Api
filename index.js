@@ -17,7 +17,9 @@ app.use(express.urlencoded({ extended: false }));
 async function generatePdf(data, filePath) {
     try {
 
+        console.log('File Start')
         const templateContent = await readFileAsync(filePath, 'utf-8');
+        console.log('File End')
 
         const renderedHtml = ejs.render(templateContent, data);
 
@@ -44,6 +46,7 @@ app.post('/admit-card', async (req, res) => {
     console.log(data)
 
     try {
+
         const pdfBuffer = await generatePdf(data, templateFilePath);
         res.set({
             'Content-Type': 'application/pdf',
