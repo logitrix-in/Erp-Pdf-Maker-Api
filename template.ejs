@@ -1,0 +1,163 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+</style>
+<div style="padding: 15px">
+  <div style="border: 2px solid rgb(28, 28, 28); padding: 20px;">
+    <div style="
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      ">
+      <div>
+        <img style="height: 100px" src=<%=logo %>
+        alt=""
+        />
+      </div>
+      <div style="
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: center;
+        ">
+        <h3>AUXILLIUM CONVENT SCHOOL</h3>
+        <p>1/2 Maple Street, New Barrackpore, Kolkata -700131</p>
+        <div style="
+            padding: 5px 10px;
+            border: 2px solid black;
+            font-weight: bold;
+            margin-top: 5px;
+          ">
+          ADMIT CARD
+        </div>
+      </div>
+      <div>
+        <img style="height: 100px" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=arnab_chatterjee"
+          alt="" />
+      </div>
+    </div>
+
+    <hr style="margin: 15px 0" />
+
+    <div>
+      <h3 style="font-size: 16px;">Roll No. 2310010</h3>
+      <div style="display: flex; gap: 10px">
+        <!-- left -->
+        <div style="
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+          ">
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Candidate Name</h4>
+            <h4 style="font-weight: 400">
+              <%= name %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Applied For</h4>
+            <h4 style="font-weight: 400">
+              <%= applied_for %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Father's Name</h4>
+            <h4 style="font-weight: 400">
+              <%= father_name %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Mother's Name</h4>
+            <h4 style="font-weight: 400">
+              <%= mother_name %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Primary Contact No.</h4>
+            <h4 style="font-weight: 400">
+              <%= contact_no %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Exam Date</h4>
+            <h4 style="font-weight: 400">
+              <%= exam_date %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 180px">Exam Time</h4>
+            <h4 style="font-weight: 400">
+              <%= exam_time %>
+            </h4>
+          </div>
+        </div>
+
+        <!-- middle -->
+        <div style="
+            flex:1;
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              margin-top: 20px;
+            ">
+          <div style="display: flex">
+            <h4 style="min-width: 110px">Gender</h4>
+            <h4 style="font-weight: 400">
+              <%= gender %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 110px">DOB</h4>
+            <h4 style="font-weight: 400">
+              <%= dob %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 110px">Exam Mode</h4>
+            <h4 style="font-weight: 400">
+              <%= exam_mode %>
+            </h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="min-width: 110px">Exam Venue</h4>
+            <h4 style="font-weight: 400">
+              <%= exam_venue %>
+            </h4>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div>
+          <img src="<%= imageUrl %>" height="150px" alt="">
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin: 40px 0" />
+    
+    
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p>Candidate</p>
+      <p>Invigilator</p>
+      <p>Principal</p>
+    </div>
+    
+  </div>
+    <hr style="margin: 40px 0" />
+
+    <div>
+      <%= instructions %>
+    </div>
+</div>
+</div>
