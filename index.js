@@ -27,11 +27,7 @@ async function generatePdf(data, filePath) {
         let file = { content: renderedHtml };
 
         console.log(file)
-
-        const pdfBuffer = await html_to_pdf.generatePdf(file, {
-            format: 'A4',
-        })
-
+        const pdfBuffer = await html_to_pdf.generatePdf(file, { format: 'A4' })
         console.log(pdfBuffer)
         return pdfBuffer;
     } catch (error) {
