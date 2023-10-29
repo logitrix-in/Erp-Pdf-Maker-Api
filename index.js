@@ -19,16 +19,20 @@ async function generatePdf(data, filePath) {
 
         console.log('File Start')
         const templateContent = await readFileAsync(filePath, 'utf-8');
-        console.log('File End')
 
         const renderedHtml = ejs.render(templateContent, data);
+        console.log('File End')
 
 
         let file = { content: renderedHtml };
 
+        console.log(file)
+
         const pdfBuffer = html_to_pdf.generatePdf(file, {
             format: 'A4',
         });
+
+        console.log(pdfBuffer)
         return pdfBuffer;
     } catch (error) {
         console.error(error);
