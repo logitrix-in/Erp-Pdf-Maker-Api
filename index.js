@@ -45,6 +45,7 @@ app.post('/admit-card', async (req, res) => {
             'Content-Disposition': 'attachment; filename="admit-card.pdf"'
         });
         res.send(pdfBuffer);
+
     } catch (error) {
 
         console.error(error);
