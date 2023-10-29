@@ -3,8 +3,13 @@ const app = express();
 const fs = require('fs');
 const ejs = require('ejs');
 const html_to_pdf = require('html-pdf-node');
+const dotenv = require('dotenv')
 const util = require('util');
 const readFileAsync = util.promisify(fs.readFile);
+
+dotenv.config()
+
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -17,7 +22,7 @@ async function generatePdf(data, filePath) {
         const renderedHtml = ejs.render(templateContent, data);
 
 
-        let file = {content: renderedHtml};
+        let file = { content: renderedHtml };
 
         const pdfBuffer = html_to_pdf.generatePdf(file, {
             format: 'A4',
@@ -53,6 +58,6 @@ app.post('/admit-card', async (req, res) => {
     }
 });
 
-app.listen(8000, () => {
-    console.log(`App started at http://localhost:8000`);
+app.listen(PORT, () => {
+    console.log(`App started at http://localhost:${PORT}`);
 });
